@@ -176,6 +176,7 @@ static void * const kMXParallaxHeaderKVOContext = (void*)&kMXParallaxHeaderKVOCo
     }
 
     [self setContentViewConstraints];
+    [self.scrollView bringSubviewToFront:self.scrollView.subviews[0]];
 }
 
 - (void)setCenterModeConstraints {
@@ -233,7 +234,7 @@ static void * const kMXParallaxHeaderKVOContext = (void*)&kMXParallaxHeaderKVOCo
     CGFloat relativeHeight  = -relativeYOffset;
 
     self.positionConstraint.constant = relativeYOffset;
-    self.heightConstraint.constant = MAX(relativeHeight, minimumHeight);
+    self.heightConstraint.constant = MAX(relativeHeight, minimumHeight)+_spaceBetweenHeaderAndContent;
 
     [self.contentView layoutSubviews];
 

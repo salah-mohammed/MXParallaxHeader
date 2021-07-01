@@ -93,6 +93,11 @@ typedef NS_ENUM(NSInteger, MXParallaxHeaderMode) {
 @property (nonatomic,readonly) CGFloat progress;
 
 /**
+ Space Between Header And Content
+ */
+@property (nonatomic,readonly) CGFloat spaceBetweenHeaderAndContent;
+
+/**
  Loads a `view` from the nib file in the specified bundle.
 
  @param name The name of the nib file, without any leading path information.
