@@ -176,7 +176,6 @@ static void * const kMXParallaxHeaderKVOContext = (void*)&kMXParallaxHeaderKVOCo
     }
 
     [self setContentViewConstraints];
-    self.contentView.backgroundColor=UIColor.redColor;
     for (UIView *item in self.scrollView.subviews) {
         if ([item isEqual:self.contentView]){
             
