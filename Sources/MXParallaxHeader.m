@@ -176,7 +176,14 @@ static void * const kMXParallaxHeaderKVOContext = (void*)&kMXParallaxHeaderKVOCo
     }
 
     [self setContentViewConstraints];
-    [self.scrollView bringSubviewToFront:self.scrollView.subviews[0]];
+    self.contentView.backgroundColor=UIColor.redColor;
+    for (UIView *item in self.scrollView.subviews) {
+        if ([item isEqual:self.contentView]){
+            
+        }else{
+        [self.scrollView bringSubviewToFront:item];
+        }
+    }
 }
 
 - (void)setCenterModeConstraints {
