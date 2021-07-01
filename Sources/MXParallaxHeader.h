@@ -95,7 +95,7 @@ typedef NS_ENUM(NSInteger, MXParallaxHeaderMode) {
 /**
  Space Between Header And Content
  */
-@property (nonatomic,readonly) CGFloat spaceBetweenHeaderAndContent;
+@property (nonatomic) CGFloat spaceBetweenHeaderAndContent;
 
 /**
  Loads a `view` from the nib file in the specified bundle.
